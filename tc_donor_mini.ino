@@ -6,8 +6,7 @@
 #include <ESP8266WiFi.h>
 
 #define wifi_ssid "vtrust-flash"
-//#define wifi_password "flashmeifyoucan"
-#define wifi_password ""
+#define wifi_password "flashmeifyoucan"
 
 #define LED 2
 
@@ -27,7 +26,7 @@ void setup_wifi() {
   delay(10);
   // We start by connecting to a WiFi network
   Serial.println();
-  Serial.print("(V1.0) Connecting to ");
+  Serial.print("Connecting to ");
   Serial.println(wifi_ssid);
   WiFi.persistent(false);
   WiFi.forceSleepWake();
@@ -68,7 +67,6 @@ void loop() {
     digitalWrite(LED, HIGH);
     if(wifiConnected) Serial.println("Disconnected!");
     wifiConnected = false;
-    blink(2,250);    
-    setup_wifi();
+    blink(2,250);
   }
 }
