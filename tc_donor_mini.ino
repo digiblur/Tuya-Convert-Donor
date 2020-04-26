@@ -6,7 +6,7 @@
 #include <ESP8266WiFi.h>
 
 #define wifi_ssid "vtrust-flash"
-#define wifi_password "flashmeifyoucan"
+#define wifi_password ""
 
 #define LED 2
 
